@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Augur's Lore SOTP Character Generator</title>
+	<link rel="stylesheet" type="text/css" href="./css/app.css">
+	<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Condensed:300,400,700" rel="stylesheet">
+	<script type="text/javascript" src="./js/app.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Augur's Lore</h1>
+		</header>
+		<div class="navigation">
+			<nav>
+				<ul>
+					<li class="home-menu-item"><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Games</a></li>
+					<li><a href="#">Events</a></li>
+					<li><a href="#">News &amp; Updates</a></li>
+					<li><a href="#">Gameplay Recaps</a></li>
+					<li><a href="#">Download</a></li1>
+				</ul>
+			</nav>
+		</div>
+		<div class="main">
+			<h1>Song of the Palestone: Character Generator</h1>
+			<div>
+				<h4>Step One - Generate Attributes</h4>
+				<div class="roll">
+					<h5>Roll the die to determine your base attributes</h5>
+					<button class="button" onclick="handlers.renderBaseAttributes()"></button>
+					<div class="hidden" id="base-attributes">
+						<div class="inline">
+							<div class="inline-result">
+								<h2>STR</h2>
+								<p id="batt-1">&nbsp;</p>
+							</div>
+							<div class="inline-result">
+								<h2>END</h2>
+								<p id="batt-2"></p>
+							</div>
+							<div class="inline-result">
+								<h2>AGI</h2>
+								<p id="batt-3"></p>
+							</div>
+							<div class="inline-result">
+								<h2>PRE</h2>
+								<p id="batt-4"></p>
+							</div>
+							<div class="inline-result">
+								<h2>INT</h2>
+								<p id="batt-5"></p>
+							</div>
+							<div class="inline-result">
+								<h2>WIS</h2>
+								<p id="batt-6"></p>
+							</div>
+							<div class="inline-result">
+								<h2>PER</h2>
+								<p id="batt-7"></p>
+							</div>
+							<div class="inline-result">
+								<h2>CHA</h2>
+								<p id="batt-8"></p>
+							</div>
+						</div>
+					</div>
+					<div class="continue hidden" id="btn-base-attributes">
+							<button class="btn-continue" onclick="view.scrollNext('step-two')">Proceed to Step Two</button>
+					</div>
+				</div>
+			</div>
+			<div class="steps hidden" id="step-two">
+				<h4>Step Two - Determine Characteristics</h4>
+				<div class="roll">
+					<h5>Roll to determine your race</h5>
+					<h6>(This will affect your attributes. Bonus/penalties will be calculated.)</h6>
+					<button class="button" onclick="handlers.renderRace()"></button>
+					<div class="hidden" id="race-result">
+						<h4 id="race">&nbsp;</h4>
+						<div class="inline content">
+							<div class="inline-result">
+								<h2>STR</h2>
+								<p id="att-1">&nbsp;</p>
+							</div>
+							<div class="inline-result">
+								<h2>END</h2>
+								<p id="att-2"></p>
+							</div>
+							<div class="inline-result">
+								<h2>AGI</h2>
+								<p id="att-3"></p>
+							</div>
+							<div class="inline-result">
+								<h2>PRE</h2>
+								<p id="att-4"></p>
+							</div>
+							<div class="inline-result">
+								<h2>INT</h2>
+								<p id="att-5"></p>
+							</div>
+							<div class="inline-result">
+								<h2>WIS</h2>
+								<p id="att-6"></p>
+							</div>
+							<div class="inline-result">
+								<h2>PER</h2>
+								<p id="att-7"></p>
+							</div>
+							<div class="inline-result">
+								<h2>CHA</h2>
+								<p id="att-8"></p>
+							</div>
+						</div>
+						<p class="bonus-penalty">--- Bonus/Penalty ---</p>
+						<div class="inline content">
+							<div class="inline-result">
+								<p id="bonpen-1">&nbsp;</p>
+							</div>
+							<div class="inline-result">
+								<p id="bonpen-2"></p>
+							</div>
+							<div class="inline-result">
+								<p id="bonpen-3"></p>
+							</div>
+							<div class="inline-result">
+								<p id="bonpen-4"></p>
+							</div>
+							<div class="inline-result">
+								<p id="bonpen-5"></p>
+							</div>
+							<div class="inline-result">
+								<p id="bonpen-6"></p>
+							</div>
+							<div class="inline-result">
+								<p id="bonpen-7"></p>
+							</div>
+							<div class="inline-result">
+								<p id="bonpen-8"></p>
+							</div>
+						</div>
+					</div>
+					<div class="continue hidden" id="btn-race">
+						<button class="btn-continue" onclick="view.scrollNext('sex-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="sex-div">
+					<h5>Roll to determine your sex</h5>
+					<button class="button" onclick="handlers.renderSex()"></button>
+					<div class="hidden" id="sex-result">
+						<h4 id="sex">&nbsp;</h4>
+					</div>
+					<div class="continue hidden" id="btn-sex">
+							<button class="btn-continue" onclick="view.scrollNext('appearance-div')">Proceed to Step Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="appearance-div">
+					<h5>Roll to determine your general appearance</h5>
+					<button class="button" onclick="handlers.renderAppearance()"></button>
+					<div class="hidden" id="appearance-result">
+						
+					</div>
+					<div class="hidden" id="appearance-option">
+						<h5>Choose to roll for distinguishing features (optional) or proceed to step three</h5>
+					</div>
+					<div class="continue hidden" id="btn-appearance-option">
+						<button class="btn-continue" onclick="view.scrollNext('features-div')">Roll for Distinguishing Features</button>
+					</div>
+					<div class="continue hidden" id="btn-appearance">
+							<button class="btn-continue" onclick="view.scrollNext('step-three')">Proceed to Step 3</button>
+					</div>
+				</div>
+				<div class="roll absent hidden padding-top-40" id="features-div">
+					<h5>Roll to determine distinguishing features</h5>
+					<button class="button" onclick="handlers.renderFeatures()"></button>
+					<div class="hidden" id="features-result">
+						
+					</div>
+					<div class="continue hidden" id="btn-features">
+							<button class="btn-continue" onclick="view.scrollNext('step-three')">Proceed to Step 3</button>
+					</div>
+				</div>
+			</div>
+			<div class="steps hidden" id="step-three">
+				<h4>Step Three - Discover Origins</h4>
+			  <div class="roll">
+					<h5>Roll to determine your region of origin</h5>
+					<button class="button" onclick="handlers.renderRegion()"></button>
+					<div class="hidden" id="region-result">
+							 
+					</div>
+					<div class="continue hidden" id="btn-region">
+							<button class="btn-continue" onclick="view.scrollNext('languages-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="languages-div">
+					<h5>Roll to determine your languages</h5>
+					<button class="button" onclick="handlers.renderLanguages()"></button>
+					<div class="hidden" id="languages-result">
+							 <h4 id="languages">&nbsp;</h4>
+					</div>
+					<div class="continue hidden" id="btn-languages">
+							<button class="btn-continue" onclick="view.scrollNext('settlement-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="settlement-div">
+					<h5>Roll to determine your original settlement</h5>
+					<button class="button" onclick="handlers.renderSettlement()"></button>
+					<div class="hidden" id="settlement-result">
+							 <h4 id="settlement">&nbsp;</h4>
+					</div>
+					<div class="continue hidden" id="btn-settlement">
+							<button class="btn-continue" onclick="view.scrollNext('parentage-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="parentage-div">
+					<h5>Roll to determine your parentage</h5>
+					<button class="button" onclick="handlers.renderParentage()"></button>
+					<div class="hidden" id="parentage-result">
+						<h4 id="parentage">&nbsp;</h4>
+					</div>
+					<div class="continue hidden" id="btn-parentage">
+							<button class="btn-continue" onclick="view.scrollNext('parent-status-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="parent-status-div">
+					<h5>Roll to determine the status of your parents</h5>
+					<button class="button" onclick="handlers.renderParentStatus()"></button>
+					<div class="hidden" id="parent-status">
+						
+					</div>
+					<div class="hidden" id="parent-status-option">
+						<h5>Choose to roll for relations (optional) or proceed to next roll</h5>
+					</div>
+					<div class="continue hidden" id="btn-parent-status-option">
+							<button class="btn-continue" onclick="view.scrollNext('relations-div')">Roll for Relations</button>
+					</div>
+					<div class="continue hidden" id="btn-parent-status">
+							<button class="btn-continue" onclick="view.scrollNext('community-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="relations-div">
+					<h5>Roll to determine your relations</h5>
+					<button class="button" onclick="handlers.renderRelations()"></button>
+					<div class="hidden" id="relations-result">
+						
+					</div>
+					<div class="continue hidden" id="btn-relations">
+							<button class="btn-continue" onclick="view.scrollNext('community-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="community-div">
+					<h5>Roll to determine your community</h5>
+					<button class="button" onclick="handlers.renderCommunity()"></button>
+					<div class="hidden" id="community-result">
+
+					</div>
+					<div class="continue hidden" id="btn-community">
+							<button class="btn-continue" onclick="view.scrollNext('cult-vals-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="cult-vals-div">
+					<h5>Roll to determine your community's cultural values</h5>
+					<button class="button" onclick="handlers.renderCulturalValues()"></button>
+					<div class="hidden" id="cult-vals-result">
+						<h4 id="cult-vals">&nbsp;</h4>
+					</div>
+					<div class="continue hidden" id="btn-cult-vals">
+							<button class="btn-continue" onclick="view.scrollNext('reputation-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="reputation-div">
+					<h5>Roll to determine your personal reputation</h5>
+					<button class="button" onclick="handlers.renderReputation()"></button>
+					<div class="hidden" id="reputation-result">
+						<h4 id="reputation">&nbsp;</h4>
+					</div>
+					<div class="hidden" id="reputation-option">
+						<h5>Choose to roll for connection (optional) or proceed to step four</h5>
+					</div>
+					<div class="continue hidden" id="btn-reputation-option">
+							<button class="btn-continue" onclick="view.scrollNext('connection-div')">Roll for Connection</button>
+					</div>
+					<div class="continue hidden" id="btn-reputation">
+							<button class="btn-continue" onclick="view.scrollNext('step-four')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="connection-div">
+					<h5>Roll to determine your potential connection</h5>
+					<button class="button" onclick="handlers.renderConnection()"></button>
+					<div class="hidden" id="connection-result">
+						
+					</div>
+					<div class="continue hidden" id="btn-connection">
+							<button class="btn-continue" onclick="view.scrollNext('step-four')">Proceed to Step Four</button>
+					</div>
+				</div>
+			</div>
+			<div class="steps hidden" id="step-four">
+				<h4>Step Four - Establish Profile</h4>
+				<div class="roll">
+					<h5>Roll to determine your aptitude</h5>
+					<button class="button" onclick="handlers.renderAptitude()"></button>
+					<div class="hidden" id="aptitude-result">
+							 <h4 id="aptitude">&nbsp;</h4>
+					</div>
+					<div class="continue hidden" id="btn-aptitude">
+							<button class="btn-continue" onclick="view.scrollNext('skills-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="skills-div">
+					<h5>Roll to determine your starting skills</h5>
+					<button class="button" onclick="handlers.renderSkills()"></button>
+					<div class="hidden" id="skills-result">
+
+					</div>
+					<div class="continue hidden" id="btn-skills">
+							<button class="btn-continue" onclick="view.scrollNext('resistances-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="resistances-div">
+					<h5>Roll to determine your resistances</h5>
+					<button class="button" onclick="handlers.renderResistances()"></button>
+					<div class="hidden" id="resistances-result">
+
+					</div>
+					<div class="continue hidden" id="btn-resistances">
+							<button class="btn-continue" onclick="view.scrollNext('path-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="path-div">
+					<h5>Roll to determine your path</h5>
+					<button class="button" onclick="handlers.renderPath()"></button>
+					<div class="hidden" id="path-result">
+						<h4 id="path">&nbsp;</h4>
+					</div>
+					<div class="continue hidden" id="btn-path">
+							<button class="btn-continue" onclick="view.scrollNext('proficiencies-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="proficiencies-div">
+					<h5>Roll to determine your proficiencies</h5>
+					<button class="button" onclick="handlers.renderProficiencies()"></button>
+					<div class="hidden" id="proficiencies-result">
+
+					</div>
+					<div class="continue hidden" id="btn-proficiencies">
+							<button class="btn-continue" onclick="view.scrollNext('abilities-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="abilities-div">
+					<h5>Roll to determine your abilities</h5>
+					<button class="button" onclick="handlers.renderAbilities()"></button>
+					<div class="hidden" id="abilities-result">
+
+					</div>
+					<div class="continue hidden" id="btn-abilities">
+							<button class="btn-continue" onclick="view.scrollNext('aux-skills-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="aux-skills-div">
+					<h5>Roll to determine your auxiliary skills</h5>
+					<h6>(These will be added to your preexisting skills)</h6>
+					<button class="button" onclick="handlers.renderAuxSkills()"></button>
+					<div class="hidden" id="aux-skills-result">
+
+					</div>
+					<div class="continue hidden" id="btn-aux-skills">
+							<button class="btn-continue" onclick="view.scrollNext('conditioning-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="conditioning-div">
+					<h5>Roll to determine your conditioning</h5>
+					<button class="button" onclick="handlers.renderConditioning()"></button>
+					<div class="hidden" id="conditioning-result">
+
+					</div>
+					<div class="continue hidden" id="btn-conditioning">
+							<button class="btn-continue" onclick="view.scrollNext('title-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="title-div">
+					<h5>Roll to determine your title</h5>
+					<button class="button" onclick="handlers.renderTitle()"></button>
+					<div class="hidden" id="title-result">
+						<h4 id="title">&nbsp;</h4>
+					</div>
+					<div class="continue hidden" id="btn-title">
+							<button class="btn-continue" onclick="view.scrollNext('term-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="term-div">
+					<h5>Roll to determine your term</h5>
+					<button class="button" onclick="handlers.renderTerm()"></button>
+					<div class="hidden" id="term-result">
+						
+					</div>
+					<div class="continue hidden" id="btn-term">
+							<button class="btn-continue" onclick="view.scrollNext('step-five')">Proceed to Step Five</button>
+					</div>
+				</div>
+			</div>
+			<div class="steps hidden" id="step-five">
+				<h4>Step Five - Encounter Pale Stone</h4>
+				<div class="roll">
+					<h5>Roll to determine your pale stone encounter</h5>
+					<button class="button" onclick="handlers.renderPaleStoneEncounter()"></button>
+					<div class="hidden" id="palestone-result">
+							 
+					</div>
+					<div class="continue hidden" id="btn-palestone">
+							<button class="btn-continue" onclick="view.scrollNext('step-six')">Proceed to Step Six</button>
+					</div>
+				</div>
+			</div>
+			<div class="steps hidden" id="step-six">
+				<h4>Step Six - Prepare for Adventure</h4>
+				<div class="roll">
+					<h5>Roll to determine your starting wealth</h5>
+					<button class="button" onclick="handlers.renderStartingWealth()"></button>
+					<div class="hidden" id="wealth-result">
+							 
+					</div>
+					<div class="continue hidden" id="btn-wealth">
+							<button class="btn-continue" onclick="view.scrollNext('readiness-div')">Proceed to Next Roll</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="readiness-div">
+					<h5>Roll to calculate your readiness</h5>
+					<button class="button" onclick="handlers.renderReadiness()"></button>
+					<div class="hidden" id="readiness-result">
+						
+					</div>
+					<div class="hidden" id="completed">
+						<h2>Your character is now complete</h2>
+						<h5>Click below to generate an editable character sheet</h5>
+					</div>
+					<div class="continue hidden" id="btn-readiness">
+							<button class="btn-continue" onclick="handlers.generatePdf()">Generate Character Sheet</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="empty-space"></div>
+</body>
+</html>
