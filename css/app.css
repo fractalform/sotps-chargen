@@ -155,13 +155,13 @@ p {
 }
 
 .appear-slow {
-	transition: 2s;
-	transition-delay: 1s;
+	transition: 1s;
+	transition-delay: 0.5s;
 	opacity: 1 !important;
 }
 
 .appear-fast {
-	transition: 2s;
+	transition: 1s;
 	opacity: 1!important;
 }
 
