@@ -1667,7 +1667,7 @@ var view = {
   renderStringForCommunity: function() {
     var community = character.origins.community;
     return '<h4>Community: ' + community.profession + '<br>' +
-    'Standard Paths: ' + community.paths.join(' or ') + '</h4>';
+    'Standard Areas of Expertise: ' + community.paths.join(' or ') + '</h4>';
   },
 
   renderStringForParentStatus: function() {
