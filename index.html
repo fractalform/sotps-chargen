@@ -194,7 +194,7 @@
 					</div>
 				</div>
 				<div class="roll hidden padding-top-40" id="languages-div">
-					<h5>Roll to discover your character's spoken languages</h5>
+					<h5>Roll to discover your character's spoken language(s)</h5>
 					<button class="button" onclick="handlers.renderLanguages()"></button>
 					<div class="hidden" id="languages-result">
 							 <h4 id="languages">&nbsp;</h4>
@@ -224,19 +224,21 @@
 					</div>
 				</div>
 				<div class="roll hidden padding-top-40" id="parent-status-div">
-					<h5>Roll to discover the status of your character's parents</h5>
+					<h5>Roll to discover the status of your character's parent(s)</h5>
 					<button class="button" onclick="handlers.renderParentStatus()"></button>
 					<div class="hidden" id="parent-status">
 						
 					</div>
 					<div class="hidden" id="parent-status-option">
-						<h5>Choose to roll for relations (optional) or proceed to next roll</h5>
+						<p>Choose to roll for relations (optional) or proceed to the next roll.</p>
 					</div>
+					<div class="inline content">
 					<div class="continue hidden" id="btn-parent-status-option">
 							<button class="btn-continue" onclick="view.scrollNext('relations-div')">Roll for Relations</button>
-					</div>
+					</div>&nbsp;&nbsp;
 					<div class="continue hidden" id="btn-parent-status">
 							<button class="btn-continue" onclick="view.scrollNext('community-div')">Next Roll</button>
+					</div>
 					</div>
 				</div>
 				<div class="roll hidden padding-top-40" id="relations-div">
@@ -278,15 +280,17 @@
 					<div class="hidden" id="reputation-option">
 						<p>Choose to roll for connection (optional) or proceed to Step Four</p>
 					</div>
+					<div class="inline content">
 					<div class="continue hidden" id="btn-reputation-option">
 							<button class="btn-continue" onclick="view.scrollNext('connection-div')">Roll for Connection</button>
-					</div>
+					</div>&nbsp;&nbsp;
 					<div class="continue hidden" id="btn-reputation">
 							<button class="btn-continue" onclick="view.scrollNext('step-four')">Next Roll</button>
 					</div>
+					</div>
 				</div>
 				<div class="roll hidden padding-top-40" id="connection-div">
-					<h5>Roll to discover your character's potential connection</h5>
+					<h5>Roll to discover your character's potential connection(s)</h5>
 					<button class="button" onclick="handlers.renderConnection()"></button>
 					<div class="hidden" id="connection-result">
 						
