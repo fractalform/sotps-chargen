@@ -2025,12 +2025,12 @@ var view = {
 
   renderStringForPaleStoneEncounter: function() {
     var encounter = character.paleStone.encounter;
-    var encounterString =  '<h4>encounter</h4><h5>' + encounter.exposure + encounter.description + encounter.locale +
-    '<br>' + encounter.impact + '<br></h5><h4>outcome</h4><h5>' + character.paleStone.outcome.join('<br>') + '</h5>';
+    var encounterString =  '<h4>encounter</h4><p>' + encounter.exposure + encounter.description + encounter.locale +
+    '&nbsp;' + encounter.impact + '<br></p><br><h4>outcome</h4><p>' + character.paleStone.outcome.join('&nbsp;') + '</p>';
     if (character.paleStone.death) {
       encounterString += '<h4>death result</h4><h5>' + character.paleStone.death + '</h5>';
       if (character.paleStone.newOutcome) {
-        encounterString += '<h4>new outcome</h4><h5>' + character.paleStone.newOutcome.join('<br>');
+        encounterString += '<h4>new outcome</h4><h5>' + character.paleStone.newOutcome.join('&nbsp;');
       }
     }
     return encounterString;
