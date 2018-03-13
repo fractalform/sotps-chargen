@@ -2167,13 +2167,19 @@ var handlers = {
     view.appearFast('connection-result');
     view.appearSlow('btn-connection');
   },
+
+  renderGivenname: function() {
+    $('Name Generator not yet functional').html;
+    view.appearFast('Name Generator not yet functional');
+    view.appearSlow('btn-connection');
+  },     
 	
 /*Working with this to create a function for Given name, but haven't agreed on a structure yet. 
 
   renderGivenname: function() {
     character.rollGivenname();
     $('#names').html(character.names.join(', '));
-    view.appearFast('names-result');
+    view.appearFast('given-name-result');
     view.appearSlow('btn-connection');
   },	
 */
