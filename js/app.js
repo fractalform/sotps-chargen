@@ -1036,6 +1036,213 @@ var ruleBook = {
       'Delepatt', 'Dinaaggy', 'Dinepatt', 'Dinestistarr', 'Fendral', 'Fibrau', 'Fonesti', 'Fynstitorr', 'Giofysus', 'Giorggy', 'Grestiorr',
       'Grestipatt', 'Jala', 'Nysus', 'Plaadapirr', 'Plaaggy', 'Yalepatt', 'Yaletysus', 'Yiost', 'Yotingorr'
       ]
+    },
+    delonian: {
+      male: [
+	'Aldorin', 'Belloril', 'Blorin', 'Bridian', 'Brif', 'Delnorimar', 'Dreft', 'Dren', 'Eiyon', 'Galasmir', 'Geomour', 'Ghandmourd', 
+	'Ishtorn', 'Kalbant', 'Kalmorian', 'Kalundir', 'Keldin', 'Keldoni', 'Keldoren', 'Kronthind', 'Leamourd', '', 'Learald', 'Mennithid', 
+	'Morson', 'Namam', 'Nirendak', 'Nirment', 'Ohimedel', 'Ohindak', 'Osmadian', 'Ryendak', 'Ryendarian', 'Shayn', 'Shel', 'Shelbakir', 
+	'Shrent', 'Stindel', 'Tatanmon', 'Tatanshour', 'Umani', 'Uyor', 'Varanak', 'Vardmour', 'Varkian', 'Velimir', 'Wyrthmir', 'Yendilar', 
+	'Yesan', 'Yordhin', 'Yorstendian'
+      ],
+      female: [
+	'Aberline', 'Ayana', 'Ayani', 'Ayshline', 'Bridoni', 'Briona', 'Drynia', 'Dygne', 'Dyra', 'Eiyodar', 'Eiyodella', 'Eiyoni', 'Flovinde', 
+	'Fourdyra', 'Fourmellide', 'Fourwan', 'Fyrythida', 'Halasmia', 'Hennia', 'Hynvinia', 'Ishmour', 'Ishnaryan', 'Ishtaya', 'Ishtelia', 
+	'Kelyni', 'Lenian', 'Lenydar', 'Lenydella', 'Lera', 'Maren', 'Miralla', 'Namara', 'Namyrian', 'Nixea', 'Nyli', 'Raya', 'Relvyni', 'Renkeda', 
+	'Rousindia', 'Stiblen', 'Stidia', 'Stinann', 'Stionda', 'Taneda', 'Wanina', 'Williana', 'Willovour', 'Winana', 'Yrelia', 'Yrelond'
+      ],
+      neutral: [
+	'Bamads', 'Bamarn', 'Darnal', 'Del', 'Grell', 'Hin\'lealen', 'Hines', 'Lin\'lear', 'Nermour', 'Nern', 'Smelkian', 'Smourvolen', 'Vardanida', 
+	'Vardhensine', 'Verhass', 'Verindolen', 'Vourna', 'Ylonid', 'Yndy', 'Ynten'
+      ]
+    },
+    elmecian: {
+      male: [
+	'Abrondrist', 'Anstabalast', 'Aralastid', 'Astabalt', 'Astik', 'Bristalast', 'Brondistoud', 'Brondrost', 'Calap', 'Cals', 'Calsteg', 
+	'Chalastid', 'Dileshaor', 'Dilonist', 'Galask', 'Galastadid', 'Gilor', 'Grisdaoud', 'Gristodasat', 'Gristopan', 'Heslanst', 'Hestor', 
+	'Hlandist', 'Hleaor', 'Hlendoud', 'Jiorjian', 'Jiorvandist', 'Ranaspor', 'Roniost', 'Ronoud', 'Ronstor', 'Staidaor', 'Stapaltist', 
+	'Trenstik', 'Trestandoud', 'Vabrandalist', 'Valihlendaor', 'Valikandist', 'Valsh', 'Voranast', 'Zadit', 'Zadshastipan', 'Zandalast', 
+	'Zandaor', 'Zanshasat', 'Zastiddost', 'Zelenstik', 'Zoleg', 'Zolistor', 'Zonbanpashat'
+      ],
+      female: [
+	'Ciornil', 'Ciorst', 'Dilevassa', 'Dinessa', 'Dinevoula', 'Dinurli', 'Dishendi', 'Dishevet', 'Dissa', 'Diveli', 'Galechenti', 'Galend', 
+	'Galessietta', 'Ganil', 'Gilil', 'Halessa', 'Hendepast', 'Hendevet', 'Hendi', 'Ikist', 'Ikistassa', 'Isimveli', 'Isinil', 'Ivinevet', 
+	'Jalichenti', 'Jikisti', 'Jikurlassa', 'Kelshassa', 'Kikichol', 'Kisheth', 'Kishevet', 'Kishietta', 'Kishsahat', 'Kistor', 'Kiva', 
+	'Narinichol', 'Narit', 'Narzichol', 'Nilessichol', 'Nistaor', 'Nistomeni', 'Nistoveli', 'Trikendit', 'Tristenessa', 'Tristiorichol', 
+	'Wileshietta', 'Wilessaor', 'Wishil', 'Yarit', 'Yarut'
+      ],
+      neutral: [
+	'Astadidaor', 'Chasta', 'Cholan', 'Chorvet', 'Delne', 'Deshevan', 'Deshilovan', 'Dilesheggi', 'Dilor', 'Kaor', 'Keshdan', 
+	'Naniost', 'Sheshtoran', 'Shestor', 'Shevet', 'Shoran', 'Trensor', 'Treshichan', 'Trishonaggi', 'Unteggi'
+      ]
+    },
+    esahn: {
+      male: [
+	'Aa\'dajei', 'Aa\'thedaja', 'Bahaelen', 'Bre\'banei', 'Bre\'dajas', 'Dajen', 'Dajen\'pa', 'Dan\'jjep', 'Dan\'sprik', 
+	'Dan\’sulo', 'Dans\'aro', 'Dans\'malnei', 'Dran\'duei', 'Faa\'waal', 'Faajje', 'Jjaeleb', 'Jjeb\'esh', 'Jjeb\'res', 
+	'Jjeb\'was', 'Jjen\'riorja', 'Jjentosh', 'Jjoth\'alai', 'Jjoth\'waal', 'Mis\'malnei', 'O\'harnio', 'O\'hul', 'O\'thenuei', 
+	'Ri\'then', 'Rioldny', 'Roth\'is', 'Ry\'raal', 'Rylor', 'Rynd', 'S\'aro', 'San', 'San\'makaal', 'San\'was', 'Taden', 
+	'Tan\'rikaal', 'Tan\'shan', 'Tand', 'Tor\'nei', 'Tor\'prikaa', 'Ya\'prikaa', 'Yau\’arr', 'Zad\'rikaal', 'Zadalury', 'Zi\'hulo', 
+	'Zi\'thio', 'Zor\'eshkaal'
+      ],
+      female: [
+	'Bredana', 'Bredana\'spask', 'Dana\'spask', 'Danajj', 'Danas', 'Darahsh', 'Den\'ire', 'En\'spisha', 'Ens\'rid', 'Ens\'thala', 'Ens\'ye', 
+	'Es\'erja', 'Najj', 'Nalir', 'Nap\'perjj', 'Nap\'san\'bi', 'Nap\'thae\'ri', 'Nis\'ib\'id', 'Nisi\'ahsh', 'Nisi\'id', 'Nyme\'id', 'Oor\'ana', 
+	'Oor\'mihaena', 'Oor\'mikella', 'Selbi', 'Ses\'ahn\'bi', 'Sperja', 'Su\'ens\'bi', 'Su\'smik\'ella', 'Su\'spej\'an', 'Sul\'ire', 'Sul\'ispask', 
+	'Suline', 'Tan\'eld\'ri', 'Tan\'ris\'is', 'Un\’derr', 'Us\'haena', 'Us\'thaela', 'Us\'thala', 'Vin\'daeni', 'Vis\'eldi', 'Vis\'oor\'is', 
+	'Vis\'perjj', 'Vis\'reana', 'Visherj', 'Vja\'rid\'bi', 'Vja\'rir', 'Vjo\'rel\'na', 'Vjo\'ri', 'Vjoline'
+      ],
+      neutral: [
+	'Ella', 'Es\'pak', 'Es\'rins', 'Inand', 'Inosh', 'Iuppsta', 'Pinsta', 'Pobb', 'S\'haenda', 'S\'marka', 'S\'pesh', 'S\'riska', 'S\'ulda', 
+	'S\'urdand', 'S\'yonta', 'Shanda', 'Urd', 'Wend', 'Wuld\'rins', 'Wuppa'
+      ]
+    },
+    kimenian: {
+      male: [
+	'Arba', 'Arth', 'Barna', 'Benna', 'Brenn', 'Bror', 'Corben', 'Corbur', 'Dars', 'Do\'urr', 'Enbur', 'Fendstadler', 'Go\'asi', 
+	'Grall', 'Grevionv', 'Helna', 'Ho\'ily', 'Ho\'roa', 'Ho\'ilubon', 'Ho\'yoar', 'Hoaran', 'Isan', 'Itoar', 'Jeyson', 'Jo\'arn', 
+	'Kelbur', 'Kilben', 'Luwen', 'Moburu', 'Nebbern', 'Nulan', 'Oban', 'Olan', 'Po\'aru', 'Po\'li', 'Poa', 'Radir', 'Ro\'ilodon', 
+	'Ro\'ildan', 'Ro\'ivion', 'Slon', 'Snal', 'So\'ibur', 'Soburu', 'Stelbern', 'Tarn', 'Trilbur', 'Worben', 'Worbur', 'Wyndon'
+      ],
+      female: [
+	'Arthen', 'Balua', 'Bliri', 'Corla', 'Cu\'elgen', 'Delyneira', 'Do\'yera', 'Drenia', 'Elga', 'Eliana', 'Enstellen', 'Fesriana', 
+	'Folunen', 'Fythriana', 'Ginnel', 'Hi\'lor', 'Hi\'lure', 'Ho\'indlana', 'Ho\'yeri', 'Ismana', 'Ismarala', 'Itana', 'Jo\'ilana', 
+	'Kelbearen', 'Ku\'ila', 'Lo\'ineira', 'Lo\'ira', 'Luene', 'Mela', 'Mo\'ina', 'Myrollia', 'Nualara', 'Oliana', 'Orana', 'Peara', 
+	'Riana', 'Rilliben', 'Ro\'indra', 'Ro\'ivara', 'Roth\'shaana', 'Rua', 'Rualana', 'Ruen', 'Smo\'ana', 'Snala', 'To\'ivana', 'Ulenna', 
+	'Ur\'ana', 'Vara', 'Wilaben'
+      ],
+      neutral: [
+	'Bara', 'Bur', 'Colrea', 'Corinlan', 'Du\'aren', 'Enken', 'Fen', 'Ho\'andrin', 'Ho\'i', 'Ho\'ivi', 'Iloan', 'Lo\'rui', 
+	'Lual', 'Lu\'alonan', 'Nur', 'Po\'i', 'Runi', 'Ulep', 'Varan', 'Varn'
+      ]
+    },
+    lorosian: {
+      male: [
+	'Albern', 'Albochisch', 'Balresch', 'Borbert', 'Breybern', 'Brihaidas', 'Churss', 'Danfuns', 'Ekkegasch', 'Ekkejor', 
+	'Ekkelen', 'Erbeohrt', 'Erbert', 'Finheah', 'Folbert', 'Hatosz', 'Hekkuss', 'Hinegan', 'Hurstosz', 'Jahlbern', 'Jahlroch', 
+	'Jehann', 'Jogen', 'Jonifatz', 'Jorchagas', 'Joseohrt', 'Murotosz', 'Murss', 'Nachjeben', 'Nachobas', 'Nalrebert', 'Praeschalk', 
+	'Pralen', 'Rikkel', 'Rolf', 'Rolfen', 'Schjobas', 'Spechtosz', 'Stjosz', 'Stold', 'Swaem', 'Trebern', 'Ulnas', 'Ulrechbas', 
+	'Vichert', 'Vichrobas', 'Volfich', 'Wolchisch', 'Wolfun', 'Zemusk' 
+      ],
+      female: [
+	'Adeld', 'Adiga', 'Ana', 'Anield', 'Arann', 'Asjaranties', 'Baathja', 'Barda', 'Billo', 'Dindiga', 'Dinebern', 'Dristha', 
+	'Dristied', 'Drixeld', 'Estiga', 'Feshaidas', 'Feshjotte', 'Jartha', 'Jaslie', 'Jerhild', 'Madsiede', 'Maghlerd', 'Magniess', 
+	'Masjrud', 'Masrika', 'Matsakine', 'Mella', 'Nanze', 'Nauflie', 'Naulotte', 'Nea', 'Niedwig', 'Nilde', 'Nysteld', 'Raana', 
+	'Rieljiende', 'Rielwig', 'Rienke', 'Rohieldig', 'Rolsiende', 'Rolstiga', 'Rolys', 'Schielea', 'Solichje', 'Stilea', 'Stinul', 
+	'Yabiets', 'Yenidas', 'Ylge', 'Ysme'
+      ],
+      neutral: [
+	'Bajmena', 'Bremhelbech', 'Burschied', 'Hannike', 'Harrgerd', 'Jahlyss', 'Jandgerd', 'Mixischig', 'Nandielf', 'Narlfuch', 
+	'Rien', 'Rienfuchs', 'Schaheld', 'Scholikke', 'Scholje', 'Stienosz', 'Stietz', 'Stikkelz', 'Stostief', 'Wallosz'
+      ]
+    },
+    ommultic: {
+      male: [
+	'Aldred', 'Alfren', 'Andor', 'Ashbern', 'Atham', 'Bennen', 'Bran', 'Brek', 'Brom', 'Coll', 'Corran', 'Dane', 'Dannek', 
+	'Danner', 'Eddwyn', 'Edrin', 'Enrick', 'Eoffrey', 'Goind', 'Grenn', 'Herban', 'Jion', 'Jionan', 'Krent', 'Lobrun', 'Lorace', 
+	'Mostas', 'Noll', 'Noran', 'Nory', 'Pent', 'Randel', 'Ranulf', 'Reen', 'Renodore', 'Robbern', 'Rondrenn', 'Royce', 'Stace',
+	'Sture', 'Tannith', 'Trall', 'Turran', 'Vander', 'Verl', 'Wayn', 'Willen', 'Wybur', 'Yewon', 'Ziland'
+      ],
+      female: [
+	'Aggi', 'Alda', 'Ashbel', 'Benna', 'Borine', 'Brenn', 'Calla', 'Ceteel', 'Danna', 'Eberli', 'Ella', 'Emeline', 'Enbelle', 
+	'Eoffra', 'Everine', 'Frina', 'Galfren', 'Gendolin', 'Halla', 'Herra', 'Igryt', 'Jaine', 'Jionna', 'Josalin', 'Laren', 'Linnan', 
+	'Linnorey', 'Malla', 'Marjen', 'Molla', 'Naren', 'Neriwentle', 'Nind', 'Olren', 'Pikit', 'Preela', 'Reina', 'Renise', 'Robban', 
+	'Rosla', 'Runan', 'Sibelle', 'Sira', 'Tarra', 'Terea', 'Thorel', 'Tiran', 'Usanna', 'Venna', 'Willa'
+      ],
+      neutral: [
+	'Beckan', 'Beveren', 'Brend', 'Cir', 'Corray', 'Dagga', 'Frey', 'Hellan', 'Jossa', 'Leyle', 'Neel', 'Oss', 'Rane', 'Ren', 
+	'Sten', 'Toly', 'Tserling', 'Venn', 'Wrey', 'Zinnar'
+      ]
+    },
+    taluan: {
+      male: [
+	'Bharbal', 'Bhasant', 'Byrat', 'Chaswindur', 'Cheedas', 'Cheel', 'Dabur', 'Darwand', 'Dhas', 'Dhukbat', 'Dilinadh', 
+	'Doaile', 'Dulandur', 'Durajavi', 'Ghanakther', 'Grivah', 'Grivtas', 'Jalibar', 'Jamia', 'Jamindhar', 'Jhenar', 'Jherand', 
+	'Jherbayarandit', 'Jyohg', 'Kavchik', 'Kevtas', 'Larhbu', 'Lovinthas', 'Nandibhash', 'Nareed', 'Pladash', 'Pranyal', 'Prendyore', 
+	'Rilek', 'Robhilash', 'Sandar', 'Shelkore', 'Shi\'ir', 'Shodyail', 'Shukhbar', 'Sidar', 'Tamayas', 'Tamile', 'Thrundher', 'Turiandher', 
+	'Whijhibas', 'Wizrhan', 'Yadhabhat', 'Yadhabhur', 'Yotile'
+      ],
+      female: [
+	'Aarythi', 'Abundana', 'Anajeet', 'Andharajeet', 'Archani', 'Archidi', 'Ashkay', 'Batise', 'Bendheilir', 'Bharbal', 'Bhavani', 
+	'Bureendas', 'Chivakranda', 'Dijeetpurani', 'Farhani', 'Filyur', 'Forshikha', 'Gestrei', 'Ghilabhani', 'Hadhtri', 'Henmara', 
+	'Henraland', 'Hesdhualha', 'Hishtindi', 'Ishjawahni', 'Ishjawan', 'Jhani', 'Kahlwi', 'Lenara', 'Makwelha', 'Mapreena', 
+	'Meejawal', 'Mik\'fahawal', 'Minjhostna', 'Nayathari', 'Neildheir', 'Niilir', 'Nikjhali', 'Potendhseir', 'Potentira', 
+	'Praveena', 'Prendbhastindhal', 'Prudaahla', 'Purdhu', 'Shalaruddha', 'Undheir', 'Upradajeet', 'Vilindabhardi', 'Yorchiss', 
+	'Yorchuseir'
+      ],
+      neutral: [
+	'Chathaveeja', 'Chathavi', 'Chatna', 'Chatrakha', 'Hehk\'maldhore', 'Kavah', 'Keejorem', 'Mi\'kavahl', 'Prindeeja', 
+	'Ranpeeja', 'Relhwhar', 'Rhanduulore', 'Rhantapshi', 'Sareen', '', 'Shukavi', 'Shupeej', 'Tordhulas', 'Torpeeja', 
+	'Varande', 'Yelvek'
+      ]
+    },
+    thelean: {
+      male: [
+	'Alyk', 'Baristil', 'Benor', 'Bentero', 'Byrald', 'Caracys', 'Caracyssus', 'Danat', 'Donnan', 'Dyrakos', 'Eldimo', 'Eriven', 
+	'Ernathandis', 'Haldor', 'Houndriil', 'Isperat', 'Jankin', 'Jantadian', 'Jentos', 'Lorenth', 'Lorkantis', 'Manimardos', 
+	'Mard', 'Meranic', 'Mermillistian', 'Pruds', 'Pylas', 'Ramdatus', 'Randagnatrus', 'Restoboldes', 'Rhyne', 'Rhythanthus', 
+	'Rory', 'Rygar', 'Ryndistus', 'Rythos', 'Thaelantus', 'Thaeles', 'Thobald', 'Thyne', 'Triburatus', 'Upalentor', 'Upir', 
+	'Urbrantis', 'Usklan', 'Velicar', 'Vorakortus', 'Vorantiprus', 'Weximaneles', 'Yustanthus'
+      ],
+      female: [
+	'Alykia', 'Amiste', 'Arantias', 'Asnarantis', 'Baeleshys', 'Baena', 'Baili', 'Daenys', 'Daerynla', 'Damystys', 'Danay', 
+	'Diatia', 'Drodana', 'Foulin', 'Fourlene', 'Ghys', 'Gwynnilaria', 'Ignafra', 'Ignay', 'Inallina', 'Inekauri', 'Isauri', 
+	'Lurenna', 'Matillis', 'Mocyvhaeri', 'Mona', 'Nalinthi', 'Netia', 'Nilinthi', 'Norathia', 'Nourlenna', 'Nourlinthia', 'Omnia', 
+	'Omniyari', 'Ovhniri', 'Pebyari', 'Sheata', 'Shialda', 'Shimarcys', 'Smystello', 'Tanabashat', 'Thissa', 'Thissandi', 'Threni', 
+	'Upira', 'Usthon', 'Vhisthanna', 'Vhosmina', 'Worana', 'Yaroudal'
+      ],
+      neutral: [
+	'Amistice', 'Amivha', 'Amivhanstas', 'Auganthas', 'Augrodana', 'Donae\'bi', 'Doniste', 'Grancervo', 'Hamithanian', 
+	'Hasticara', 'Polensias', 'Polerithus', 'Ruvhenma', 'Ruvhenmisias', 'Tallanthias', 'Virae\'bi', 'Warkindar', 'Welea', 
+	'Wostae\'bi', 'Wostecys'
+      ]
+    },
+    torlish: {
+      male: [
+	'Athalis', 'Athanracys', 'Bolantar', 'Hestus', 'Jelekancys', 'Jogatus', 'Kalytar', 'Marmillan', 'Marolis', 
+	'Mas\'dmas', 'Masdanikdars', 'Mialdo', 'Mormandan', 'Parkhunavas', 'Pelmatus', 'Praelbins', 'Raeln', 'Raeloric', 
+	'Rahaelytar', 'Then\'tier', 'Upal', 'Uskecys', 'Vhesantias', 'Vhlen\'bors', 'Vhor'
+      ],
+      female: [
+	'Borduvia', 'Cerathey', 'Cheyle', 'Etya', 'Ialda', 'Iniknek', 'Lurencya', 'Maedyr', 'Mepalti', 'Mepatell', 'Minnelek', 
+	'Nalenthey', 'Nalvara', 'Pradh\'malis', 'Vhaeb', 'Vhaedan', 'Vhaelafra', 'Vhaelechey', 'Vhaelercya', 'Vhaelycy', 
+	'Vhaennilar', 'Vhaerana', 'Vhaessek', 'Zhelcya', 'Zhella'
+      ]
+    },
+    uskelian: {
+      male: [
+	'Ankhmar', 'Banslan', 'Banthas', 'Braikhil', 'Bryindik', 'Bryliodzh', 'Bryorin', 'Dasmalkhalion', 'Dudrovevat', 'Dukeltal', 
+	'Dukrev', 'Dzhadinad', 'Fedezhmik', 'Fedistrithad', 'Fedneslan', 'Grusteliod', 'Gruterin', 'Gutal', 'Gutelion', 'Kehlastiod', 
+	'Kelast', 'Kilindin', 'Kugrestrithad', 'Megas', 'Methriak', 'Mikhelvik', 'Mindzan', 'Molaradin', 'Mothrevat', 'Mugell', 
+	'Mugrevmik', 'Pelkan', 'Rethalkurat', 'Revithrilan', 'So\'adrad', 'So\'brandion', 'So\'timuskhalion', 'Tedsthevat', 'Timolarn', 
+	'Timurske', 'Tuskaured', 'Tusthas', 'Ushlastrilan', 'Usked', 'Uskezhmidin', 'Whelovurske', 'Whelvik', 'Wukhilad', 
+	'Zaumelizhak', 'Zaurat'
+      ],
+      female: [
+	'Beskiviska', 'Beviry', 'Beviskelka', 'Brinsel', 'Bryliodzha', 'Chesku', 'Chimolara', 'Chiskil', 'Chissa', 'Dikha', 'Dirna', 
+	'Dirokha', 'Dyts', 'Fadezhmi', 'Galad', 'Galavra', 'Galirna', 'Garesku', 'Gathark', 'Hranka', 'Ineska', 'Irissa', 'Ithark', 
+	'Ithietka', 'Keldzha', 'Kelnavra', 'Lij', 'Lirokha', 'Liskana', 'Livarask', 'Megel', 'Megleska', 'Ujzija', 'Unessa', 'Verunt', 
+	'Verustina', 'Vestil', 'Whespira', 'Yalesk', 'Yaskha', 'Yasrokeska', 'Ydmerska', 'Yesti', 'Yijana', '', 'Yka', 'Ystana', 
+	'Zlatiskil', 'Zlatjara', 'Zlatkha', 'Zleska'
+      ],
+      neutral: [
+	'Arka', 'Arkya', 'Cer\'ran', 'Menskres', 'Netya', 'Nur\'vosk', 'Pet\'res', 'Pevel', 'Spetsres', 'Tsenkh', 'Ur\'ran', 'Urnya', 
+	'Uvel', 'Uvestya', 'Vaskal', 'Veskelia', 'Veskolren', 'Veskrilans', 'Yanskava', 'Zhenkens'
+      ]
+    },
+    volaani: {
+      neutral: [
+	'Ak\'keprevix', 'Ak\'kixivari', 'Ak\'ravi', 'Ak\'vixitilisti', 'Ak’uuv', 'Akjuja', 'Akjujisti', 'Dex\'mikaak', 'Dezeva', 'Dezvaan', 
+	'Dezvexlisix', 'Diik\'riuuvi', 'Djuzevi', 'Doej\'xiavass', 'Dotsunix', 'Dovola', 'Dovolostix', 'Jalx', 'Jilisti', 'Jillx', 
+	'Jilxix', 'Jipravix', 'Jistna', 'Kedixik', 'Kedzen', 'Kelik’var', 'Kenoraan', 'Ketx', 'Kezev', 'Kezovmikex', 'Kili’uk', 
+	'Kisdivarja', 'Kiskezix', 'Kiskivi', 'Kiskuja', 'Kiv\'pitxia', 'Kivazhaan', 'Kiviprixi', 'Kivixiil', 'Kix\'noxik', 'Mo\'vaani', 
+	'Moxixlisix', 'Moxrevena', 'Moxriak', 'Moxvinkov', 'Najavalix', 'Nakivi', 'Nandastiox', 'Nav\'rixivi', 'Navo\'lixik', 'Naxiil', 
+	'Nexdepax', 'Norevani', 'Norkixia', 'Oz\'doxviok', 'Oz\'radistix', 'Oz\'volaan', 'Par\'killidjuz', 'Parxi', 'Pitz', 'Pitz\'uurx', 
+	'Prakizdixik', 'Prakjist', 'Prastiviox', 'Prenex', 'Prexevix', 'Ra\'xia', 'Ramazha', 'Ramjixix', 'Ramviprex', 'Rax', 'Razha', 
+	'Ts\'idevix', 'Ts\'onst', 'Ts\'uviti', 'Uvixernox', 'Vii\'dis', 'Vin\'rapitx', 'Vinixko', 'Vix\'xiatl', 'Vixirazh', 'Vixtl', 
+	'Voeijazss', 'Vrenixlaan', 'Vrenopapren', 'Vrenprexipaal', 'Xia\'aixia', 'Xialapar', 'Xialleve', 'Xialsti', 'Xiaxialle', 
+	'Xilpaltix', 'Zalix', 'Zaxiil', 'Zhirahsha', 'Ziskelle', 'Ziskolaani', 'Zixdistix', 'Zonora', 'Zonoxik'
+      ]
     }
   },
   aptitudes: [
