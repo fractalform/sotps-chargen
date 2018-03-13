@@ -1690,27 +1690,27 @@ var ruleBook = {
   ],
   termOutcomes: {
     allNumbersDistinct: [
-    'average aptitude toward path',
+    'character seems to have a standard facility for their expertise',
     'no bonuses to training'
     ],
     sequentialNumbers: [
-    'adept prowess in path',
+    'character has an adept prowess in their area of expertise',
     '+2 to skills, abilities, resistances, and proficiencies'
     ],
     oneEqualedPair: [
-    'above-average aptitude toward path',
+    'character performs with above-average competence in their field of expertise',
     '+2 to skills and abilities'
     ],
     threeEqualNumbers: [
-    'below-average aptitude toward path',
+    'character has displayed below-average engagement in their field of expertise',
     '-1 to skills, -2 to proficiencies'
     ],
     twoEqualedPairs: [
-    'mastery toward path',
+    'character demonstrates a mastery of their field of expertise',
     '+4 to skills, abilities, resistances, and proficiencies'
     ],
     allEqualNumbers: [
-    'unrivaled command of path',
+    'character possesses an unrivaled command over their field of expertise',
     '+6 skills, abilities, resistances, and proficiencies'
     ]
   },
