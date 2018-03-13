@@ -298,7 +298,17 @@
 					</div>	
 					</div>
 					<div class="continue hidden" id="btn-connection">
-							<button class="btn-continue" onclick="view.scrollNext('step-four')">Proceed to Step Four</button>
+							<button class="btn-continue" onclick="view.scrollNext('char-name')">Name your Character</button>
+					</div>
+				</div>
+				<div class="roll hidden padding-top-40" id="char-name">
+					<h5>Generate a given name for your character</h5>
+					<button class="button" onclick="handlers.renderGivenname()"></button>
+					<div class="hidden" id="given-name-result">
+						<h4 id="given-name">&nbsp;</h4>
+					</div>
+					<div class="continue hidden" id="step-four">
+							<button class="btn-continue" onclick="view.scrollNext('reputation-div')">Proceed to Step Four</button>
 					</div>
 				</div>
 			</div>
