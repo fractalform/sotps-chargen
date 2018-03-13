@@ -1,1 +1,1 @@
-# sotp-character-generator
+# sotps-character-generator
