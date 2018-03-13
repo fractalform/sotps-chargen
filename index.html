@@ -78,9 +78,9 @@
 				<div class="roll">
 					<h5>Roll to determine your ancestry</h5>
 					<h6>(This will affect your attributes. Bonus/penalties will be calculated.)</h6>
-					<button class="button" onclick="handlers.renderRace()"></button>
-					<div class="hidden" id="race-result">
-						<h4 id="race">&nbsp;</h4>
+					<button class="button" onclick="handlers.renderAncestry()"></button>
+					<div class="hidden" id="ancestry-result">
+						<h4 id="ancestry">&nbsp;</h4>
 						<div class="inline content">
 							<div class="inline-result">
 								<h2>STR</h2>
@@ -143,7 +143,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="continue hidden" id="btn-race">
+					<div class="continue hidden" id="btn-ancestry">
 						<button class="btn-continue" onclick="view.scrollNext('sex-div')">Proceed to Next Roll</button>
 					</div>
 				</div>
