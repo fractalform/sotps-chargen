@@ -1622,14 +1622,14 @@ var view = {
     $('#' + id).addClass(' present');
     setTimeout(function() {
       $('#' + id).addClass('appear-fast')
-    }, 200);
+    }, 100);
 	},
 
 	appearSlow: function(id) {
     $('#' + id).addClass(' present');
 		setTimeout(function() {
       $('#' + id).addClass('appear-slow')
-    }, 200);
+    }, 100);
 	},
 
 	scrollNext: function(id) {
@@ -1637,7 +1637,7 @@ var view = {
 	  setTimeout(function() {
     	$('html, body').animate({
       	scrollTop: $('#' + id).offset().top
-    	}, 2000);
+    	}, 1000);
   	},0000);
   },
 
