@@ -29,7 +29,7 @@ var character = {
     int: null, wis: null, per: null, cha: null
   },
   characteristics: {
-    race: '',
+    ancestry: '',
     sex: '',
     appearance: {
       height: null,
@@ -67,19 +67,19 @@ var character = {
     });
 	},
 
-	rollRace: function() {
-	  var races = [
-    {race: 'human', adjustments: [0, 0, 0, 0, 0, 0, 0, 0]},
-    {race: 'ais\'lun', adjustments: [0, 2, -2, 0, -1, 1, 2, 0]},
-    {race: 'viantu', adjustments: [-2, -1, 2, 2, 1, 0, 0, 0]},
-    {race: 'djenndan', adjustments: [2, 2, -1, -2, 0, 0, 1, 0]},
-    {race: 'kahlniss&#225', adjustments: [-1, -2, 2, 0, 2, 0, 1, 0]},
-    {race: 'pulnag&#225', adjustments: [0, 0, 1, 1, 1, -1, -1, 0]}
+	rollAncestry: function() {
+	  var ancestries = [
+    {ancestry: 'human', adjustments: [0, 0, 0, 0, 0, 0, 0, 0]},
+    {ancestry: 'ais\'lun', adjustments: [0, 2, -2, 0, -1, 1, 2, 0]},
+    {ancestry: 'viantu', adjustments: [-2, -1, 2, 2, 1, 0, 0, 0]},
+    {ancestry: 'djenndan', adjustments: [2, 2, -1, -2, 0, 0, 1, 0]},
+    {ancestry: 'kahlniss&#225', adjustments: [-1, -2, 2, 0, 2, 0, 1, 0]},
+    {ancestry: 'pulnag&#225', adjustments: [0, 0, 1, 1, 1, -1, -1, 0]}
     ];
-		var raceResult = races[diceRoller.single(6) - 1];
-    this.characteristics.race = raceResult.race;
+		var ancestryResult = ancestries[diceRoller.single(6) - 1];
+    this.characteristics.ancestry = ancestryResult.ancestry;
     ruleBook.attributes.forEach(function(att, idx) {
-      character.finalAttributes[att] = character.baseAttributes[att] + raceResult.adjustments[idx];
+      character.finalAttributes[att] = character.baseAttributes[att] + ancestryResult.adjustments[idx];
     });
 		this.calculateBonusPenalties();
 	},
@@ -141,7 +141,7 @@ var character = {
   rollGeneralAppearance: function() {
     var appearance = this.characteristics.appearance;
     ruleBook.appearances.forEach(function(obj) {
-      if (character.characteristics.race === obj.race) {
+      if (character.characteristics.ancestry === obj.ancestry) {
         appearance.height = diceRoller.multiple(obj.height[0], 6) + obj.height[1];
         appearance.weight = diceRoller.multiple(obj.weight[0], 20) + obj.weight[1];
         appearance.baseAge = diceRoller.single(obj.baseAge[0]) + obj.baseAge[1];
@@ -183,7 +183,7 @@ var character = {
   rollLanguages: function() {
     var languages = [];
     var languagePool = this.origins.region.languages.slice();
-    if (character.characteristics.race === 'djenndan' && languagePool.indexOf('alldedan') === -1) {
+    if (character.characteristics.ancestry === 'djenndan' && languagePool.indexOf('alldedan') === -1) {
       languagePool.push('alldedan');
     }
     var dieResult = diceRoller.single(4);
@@ -751,12 +751,12 @@ var character = {
 var ruleBook = {
   attributes: ['str', 'end', 'agi', 'pre', 'int', 'wis', 'per', 'cha'],
   appearances : [
-    {race: 'human', height:[3, 60], weight: [6, 100], baseAge: [8, 15]},
-    {race: 'ais\'lun', height: [3, 36], weight: [5, 70], baseAge: [20, 30]},
-    {race: 'viantu', height: [4, 36], weight: [3, 40], baseAge: [6, 5]},
-    {race: 'djenndan', height: [3, 84], weight: [6, 280], baseAge: [8, 12]},
-    {race: 'kahlniss&#225', height: [4, 48], weight: [5, 50], baseAge: [12, 15]},
-    {race: 'pulnag&#225', height: [3, 60], weight: [5, 90], baseAge: [10, 15]},
+    {ancestry: 'human', height:[3, 60], weight: [6, 100], baseAge: [8, 15]},
+    {ancestry: 'ais\'lun', height: [3, 36], weight: [5, 70], baseAge: [20, 30]},
+    {ancestry: 'viantu', height: [4, 36], weight: [3, 40], baseAge: [6, 5]},
+    {ancestry: 'djenndan', height: [3, 84], weight: [6, 280], baseAge: [8, 12]},
+    {ancestry: 'kahlniss&#225', height: [4, 48], weight: [5, 50], baseAge: [12, 15]},
+    {ancestry: 'pulnag&#225', height: [3, 60], weight: [5, 90], baseAge: [10, 15]},
   ],
   distinguishingFeatures: {
     quirks: [
@@ -1831,9 +1831,9 @@ var handlers = {
 	  view.appearSlow('btn-base-attributes');
 	},
 
-  renderRace: function() {
-  	character.rollRace();
-  	$('#race').html(character.characteristics.race);
+  renderAncestry: function() {
+  	character.rollAncestry();
+  	$('#ancestry').html(character.characteristics.ancestry);
   	var bonPen = character.bonusPenalties;
     ruleBook.attributes.forEach(function(att, idx) {
       $('#att-' + (idx + 1)).html('' + character.finalAttributes[att]);
@@ -1845,8 +1845,8 @@ var handlers = {
         $('#bonpen-' + (idx + 1)).html('' + bonPen[att]);
       }
     })
-    view.appearFast('race-result');
-    view.appearSlow('btn-race');
+    view.appearFast('ancestry-result');
+    view.appearSlow('btn-ancestry');
   },
   
   renderSex: function() {
