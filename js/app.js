@@ -368,6 +368,10 @@ var character = {
     this.origins.connection = connections[diceRoller.single(11) - 1];
   },
 
+  rollGivenname: function() {
+    this.origins.givenname = ruleBook.names[diceRoller.single(ruleBook.names)];
+  },	
+	
   rollAptitude: function() {
     var primaryAtts = ruleBook.attributes.map(function(att) {
       return {attribute: att, score: character.finalAttributes[att]};
@@ -2153,6 +2157,13 @@ var handlers = {
     view.appearSlow('btn-connection');
   },
 
+  renderGivenname: function() {
+    character.rollGivenname();
+    $('#names').html(character.names.join(', '));
+    view.appearFast('names-result');
+    view.appearSlow('btn-connection');
+  },	
+	
   renderAptitude: function() {
     character.rollAptitude();
     $('#aptitude').html(character.aptitude.name);
