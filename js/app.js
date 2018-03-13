@@ -1962,6 +1962,10 @@ var view = {
     return relationsString;
   },
 
+  renderStringForGivenname: function() {
+    return '<h4>Name Generator not yet functional</h4>';
+  },
+	
   renderStringForConnection: function() {
     return '<h4>' + character.origins.connection.join('<br>') + '</h4>';
   },
@@ -2169,9 +2173,9 @@ var handlers = {
   },
 
   renderGivenname: function() {
-    $('Name Generator not yet functional').html;
-    view.appearFast('Name Generator not yet functional');
-    view.appearSlow('btn-connection');
+    $('#givenname-result').html(view.renderStringForGivenname());
+    view.appearFast('givenname-result');
+    view.appearSlow('btn-continue');
   },     
 	
 /*Working with this to create a function for Given name, but haven't agreed on a structure yet. 
