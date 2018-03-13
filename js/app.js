@@ -367,10 +367,21 @@ var character = {
     ];
     this.origins.connection = connections[diceRoller.single(11) - 1];
   },
+/*
+
+Using this to work out the code for name generation referring to sex, language, and the rulebook names added below.
 
   rollGivenname: function() {
-    this.origins.givenname = ruleBook.names[diceRoller.single(ruleBook.names)];
-  },	
+    var namesObject = ruleBook.names;
+    this.origins.regions.languages = [];
+    var languages = this.origins.regions.languages;
+    this.characteristics.sex = [];
+    var languages = this.characteristics.sex;  
+    for (category in namesObject) {
+      names.push(namesObject[category][category][diceRoller.single(50) - 1]);
+    }
+    });
+*/
 	
   rollAptitude: function() {
     var primaryAtts = ruleBook.attributes.map(function(att) {
@@ -2156,6 +2167,8 @@ var handlers = {
     view.appearFast('connection-result');
     view.appearSlow('btn-connection');
   },
+	
+/*Working with this to create a function for Given name, but haven't agreed on a structure yet. 
 
   renderGivenname: function() {
     character.rollGivenname();
@@ -2163,6 +2176,7 @@ var handlers = {
     view.appearFast('names-result');
     view.appearSlow('btn-connection');
   },	
+*/
 	
   renderAptitude: function() {
     character.rollAptitude();
