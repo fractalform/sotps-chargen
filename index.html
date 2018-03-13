@@ -278,6 +278,7 @@
 						<h4 id="reputation">&nbsp;</h4>
 					</div>
 					<div class="hidden" id="reputation-option">
+						<p>&nbsp;</p>
 						<p>Choose to roll for connections (optional) or continue to Step Four.<br>
 						You should also name your character at this stage of character creation (Name Generator currently under construction)</p>
 					</div>
@@ -288,6 +289,15 @@
 					<div class="continue hidden" id="btn-reputation">
 							<button class="btn-continue" onclick="view.scrollNext('step-four')">Proceed to Step Four</button>
 					</div>
+					</div>
+				<div class="roll hidden padding-top-40" id="connection-div">
+					<h5>Roll to determine your potential connection</h5>
+					<button class="button" onclick="handlers.renderConnection()"></button>
+					<div class="hidden" id="connection-result">
+						
+					</div>
+					<div class="continue hidden" id="btn-connection">
+							<button class="btn-continue" onclick="view.scrollNext('step-four')">Proceed to Step Four</button>
 					</div>
 				</div>
 			</div>
