@@ -278,14 +278,14 @@
 						<h4 id="reputation">&nbsp;</h4>
 					</div>
 					<div class="hidden" id="reputation-option">
-						<p>Choose to roll for connection (optional) or proceed to Step Four</p>
+						<p>Choose to roll for connection (optional) or continue by selecting a character name.</p>
 					</div>
 					<div class="inline content">
 					<div class="continue hidden" id="btn-reputation-option">
 							<button class="btn-continue" onclick="view.scrollNext('connection-div')">Roll for Connection</button>
 					</div>&nbsp;&nbsp;
 					<div class="continue hidden" id="btn-reputation">
-							<button class="btn-continue" onclick="view.scrollNext('step-four')">Next Roll</button>
+							<button class="btn-continue" onclick="view.scrollNext('char-name')">Name your character</button>
 					</div>
 					</div>
 				</div>
@@ -293,7 +293,9 @@
 					<h5>Roll to discover your character's potential connection(s)</h5>
 					<button class="button" onclick="handlers.renderConnection()"></button>
 					<div class="hidden" id="connection-result">
-						
+					<div class="continue hidden" id="btn-reputation">
+							<button class="btn-continue" onclick="view.scrollNext('char-name')">Name your character</button>
+					</div>	
 					</div>
 					<div class="continue hidden" id="btn-connection">
 							<button class="btn-continue" onclick="view.scrollNext('step-four')">Proceed to Step Four</button>
