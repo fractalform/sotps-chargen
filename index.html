@@ -278,32 +278,16 @@
 						<h4 id="reputation">&nbsp;</h4>
 					</div>
 					<div class="hidden" id="reputation-option">
-						<p>Choose to roll for connection (optional) or continue by selecting a character name.</p>
+						<p>Choose to roll for connections (optional) or continue to Step Four.<br>
+						You should also name your character at this stage of character creation (Name Generator currently under construction)</p>
 					</div>
 					<div class="inline content">
 					<div class="continue hidden" id="btn-reputation-option">
-							<button class="btn-continue" onclick="view.scrollNext('connection-div')">Roll for Connection</button>
+							<button class="btn-continue" onclick="view.scrollNext('connection-div')">Roll for Connections</button>
 					</div>&nbsp;&nbsp;
 					<div class="continue hidden" id="btn-reputation">
-							<button class="btn-continue" onclick="view.scrollNext('char-name')">Name your character</button>
-					</div>
-					</div>
-				</div>
-				<div class="roll hidden padding-top-40" id="connection-div">
-					<h5>Roll to discover your character's potential connection</h5>
-					<button class="button" onclick="handlers.renderConnection()"></button>
-					<div class="hidden" id="connection-result">
-					<div class="continue hidden" id="btn-reputation">
-							<button class="btn-continue" onclick="view.scrollNext('char-name')">Name your character</button>
-					</div>	
-					</div>
-				</div>
-				<div class="roll hidden padding-top-40" id="char-name">
-					<h5>Generate a given name for your character</h5>
-					<button class="button" onclick="handlers.renderGivenname"></button>
-					<div class="hidden" id="given-name-result">
-					<div class="continue hidden" id="btn-continue">
 							<button class="btn-continue" onclick="view.scrollNext('step-four')">Proceed to Step Four</button>
+					</div>
 					</div>
 				</div>
 			</div>
