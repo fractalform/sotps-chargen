@@ -9,10 +9,12 @@
 </head>
 <body>
 	<div class="container">
+		<header>
+			<h1>Song of the Pale Stone: Character Generator</h1>
+		</header>
 		<div class="main">
-			<h1>Song of the Palestone: Character Generator</h1>
 			<div>
-				<h4>Step One - Generate Attributes</h4>
+				<h3>Step One - Generate Attributes</h3>
 				<div class="roll">
 					<h5>Roll the die to determine your base attributes</h5>
 					<button class="button" onclick="handlers.renderBaseAttributes()"></button>
@@ -58,7 +60,7 @@
 				</div>
 			</div>
 			<div class="steps hidden" id="step-two">
-				<h4>Step Two - Determine Characteristics</h4>
+				<h3>Step Two - Determine Characteristics</h3>
 				<div class="roll">
 					<h5>Roll to determine your ancestry</h5>
 					<h6>(This will affect your attributes. Bonus/penalties will be calculated.)</h6>
@@ -169,7 +171,7 @@
 				</div>
 			</div>
 			<div class="steps hidden" id="step-three">
-				<h4>Step Three - Discover Origins</h4>
+				<h3>Step Three - Discover Origins</h3>
 			  <div class="roll">
 					<h5>Roll to determine your region of origin</h5>
 					<button class="button" onclick="handlers.renderRegion()"></button>
@@ -284,7 +286,7 @@
 				</div>
 			</div>
 			<div class="steps hidden" id="step-four">
-				<h4>Step Four - Establish Profile</h4>
+				<h3>Step Four - Establish Profile</h3>
 				<div class="roll">
 					<h5>Roll to determine your aptitude</h5>
 					<button class="button" onclick="handlers.renderAptitude()"></button>
@@ -388,7 +390,7 @@
 				</div>
 			</div>
 			<div class="steps hidden" id="step-five">
-				<h4>Step Five - Encounter Pale Stone</h4>
+				<h3>Step Five - Encounter Pale Stone</h3>
 				<div class="roll">
 					<h5>Roll to determine your pale stone encounter</h5>
 					<button class="button" onclick="handlers.renderPaleStoneEncounter()"></button>
@@ -401,7 +403,7 @@
 				</div>
 			</div>
 			<div class="steps hidden" id="step-six">
-				<h4>Step Six - Prepare for Adventure</h4>
+				<h3>Step Six - Prepare for Adventure</h3>
 				<div class="roll">
 					<h5>Roll to determine your starting wealth</h5>
 					<button class="button" onclick="handlers.renderStartingWealth()"></button>
