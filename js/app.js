@@ -69,7 +69,7 @@ var character = {
 
 	rollAncestry: function() {
 	  var ancestries = [
-    {ancestry: 'human', adjustments: [0, 0, 0, 0, 0, 0, 0, 0]},
+    {ancestry: 'human', adjustments: [-1, 1, 0, 1, 0, -1, 0, 1]},
     {ancestry: 'ais\'lun', adjustments: [0, 2, -2, 0, -1, 1, 2, 0]},
     {ancestry: 'viantu', adjustments: [-2, -1, 2, 2, 1, 0, 0, 0]},
     {ancestry: 'djenndan', adjustments: [2, 2, -1, -2, 0, 0, 1, 0]},
@@ -1434,11 +1434,11 @@ var ruleBook = {
   {
     name: 'alchemy',
     proficiencies: [
-    {name: 'herbalism', attribute: 'per', requirement: 5, score: 0},
-    {name: 'tonics', attribute: 'per', requirement: 7, score: 0},
     {name: 'compounds', attribute: 'int', requirement: 9, score: 0},
+    {name: 'elixirs', attribute: 'int', requirement: 13, score: 0},
+    {name: 'herbalism', attribute: 'per', requirement: 5, score: 0},
     {name: 'salves', attribute: 'wis', requirement: 11, score: 0},
-    {name: 'elixirs', attribute: 'int', requirement: 13, score: 0}
+    {name: 'tonics', attribute: 'per', requirement: 7, score: 0}
     ],
     abilities: [
     {name: 'assess threat', score: 1},
@@ -1466,11 +1466,11 @@ var ruleBook = {
   {
     name: 'combat',
     proficiencies: [
-    {name: 'power strikes', attribute: 'str', requirement: 7, score: 0},
-    {name: 'precision strikes', attribute: 'pre', requirement: 7, score: 0},
-    {name: 'immobilization', attribute: 'end', requirement: 9, score: 0},
+    {name: 'field tactics', attribute: 'wis', requirement: 11, score: 0},
     {name: 'finesse maneuvers', attribute: 'agi', requirement: 9, score: 0},
-    {name: 'field tactics', attribute: 'wis', requirement: 11, score: 0}
+    {name: 'immobilization', attribute: 'end', requirement: 9, score: 0},	    
+    {name: 'power strikes', attribute: 'str', requirement: 7, score: 0},
+    {name: 'precision strikes', attribute: 'pre', requirement: 7, score: 0}
     ],
     abilities: [
     {name: 'assess threat', score: 2},
@@ -1498,11 +1498,11 @@ var ruleBook = {
   {
     name: 'crafts',
     proficiencies: [
+    {name: 'construction', attribute: 'per', requirement: 11, score: 0},   
+    {name: 'fine crafts', attribute: 'pre', requirement: 11, score: 0},
     {name: 'mechanisms', attribute: 'int', requirement: 9, score: 0},
-    {name: 'construction', attribute: 'per', requirement: 11, score: 0},
-    {name: 'armorer', attribute: 'pre', requirement: 11, score: 0},
-    {name: 'transports', attribute: 'end', requirement: 7, score: 0},
-    {name: 'fine crafts', attribute: 'pre', requirement: 11, score: 0}
+    {name: 'smithing', attribute: 'str', requirement: 11, score: 0},
+    {name: 'transports', attribute: 'end', requirement: 7, score: 0}
     ],
     abilities: [
     {name: 'assess threat', score: 1},
@@ -1528,45 +1528,13 @@ var ruleBook = {
     titles: ['no title', 'bumbler', 'artisan', 'master']
   },
   {
-    name: 'manipulation',
-    proficiencies: [
-    {name: 'disguises', attribute: 'per', requirement: 9, score: 0},
-    {name: 'skullduggery', attribute: 'pre', requirement: 9, score: 0},
-    {name: 'wit', attribute: 'cha', requirement: 11, score: 0},
-    {name: 'intelligence', attribute: 'int', requirement: 13, score: 0},
-    {name: 'stealth', attribute: 'agi', requirement: 11, score: 0}
-    ],
-    abilities: [
-    {name: 'assess threat', score: 1},
-    {name: 'collect information', score: 2},
-    {name: 'find', score: 1},
-    {name: 'haggle', score: 1},
-    {name: 'navigate', score: 1},
-    {name: 'take notice', score: 2}
-    ],
-    auxSkills: [
-    {name: 'appraise', score: 0}, {name: 'acrobatic feat', score: 0},
-    {name: 'forgery', score: 0}, {name: 'bandage injury', score: 0},
-    {name: 'gamble', score: 0}, {name: 'bribe', score: 0},
-    {name: 'jump', score: 0}, {name: 'decipher', score: 0},
-    {name: 'provoke', score: 0}, {name: 'recollect', score: 0},
-    {name: 'scale wall', score: 0}, {name: 'run', score: 0}
-    ],
-    conditioning: [
-    {name: 'poise', score: 0},
-    {name: 'avoidance', score: 1},
-    {name: 'capacity', score: 1}
-    ],
-    titles: ['no title', 'rat', 'dasher', 'mystborn']
-  },
-  {
     name: 'influence',
     proficiencies: [
-    {name: 'oration', attribute: 'cha', requirement: 9, score: 0},
-    {name: 'leadership', attribute: 'wis', requirement: 9, score: 0},
-    {name: 'entertaining', attribute: 'characteristics', requirement: 11, score: 0},
+    {name: 'connections', attribute: 'int', requirement: 13, score: 0},   
     {name: 'diplomacy', attribute: 'int', requirement: 11, score: 0},
-    {name: 'connections', attribute: 'int', requirement: 13, score: 0}
+    {name: 'leadership', attribute: 'wis', requirement: 9, score: 0},
+    {name: 'misdirection', attribute: 'cha', requirement: 11, score: 0},
+    {name: 'oration', attribute: 'cha', requirement: 9, score: 0}
     ],
     abilities: [
     {name: 'assess threat', score: 2},
@@ -1594,11 +1562,11 @@ var ruleBook = {
   {
     name: 'lore',
     proficiencies: [
-    {name: 'knowledge', attribute: 'wis', requirement: 9, score: 0},
-    {name: 'focused study', attribute: 'wis', requirement: 11, score: 0},
-    {name: 'ritual', attribute: 'per', requirement: 11, score: 0},
-    {name: 'rhetoric', attribute: 'int', requirement: 13, score: 0},
-    {name: 'incantation', attribute: 'cha', requirement: 13, score: 0}
+    {name: 'focused study', attribute: 'wis', requirement: 11, score: 0},	    
+    {name: 'incantation', attribute: 'cha', requirement: 13, score: 0},
+    {name: 'knowledge', attribute: 'wis', requirement: 11, score: 0},
+    {name: 'rhetoric', attribute: 'int', requirement: 9, score: 0},	    
+    {name: 'ritual', attribute: 'per', requirement: 7, score: 0}
     ],
     abilities: [
     {name: 'assess threat', score: 2},
@@ -1624,13 +1592,45 @@ var ruleBook = {
     titles: ['no title', 'heretic', 'elder', 'harbinger']
   },
   {
+    name: 'manipulation',
+    proficiencies: [
+    {name: 'disguises', attribute: 'per', requirement: 9, score: 0},
+    {name: 'intelligence', attribute: 'int', requirement: 13, score: 0},	    
+    {name: 'skullduggery', attribute: 'pre', requirement: 9, score: 0},
+    {name: 'stealth', attribute: 'agi', requirement: 7, score: 0},
+    {name: 'wit', attribute: 'cha', requirement: 11, score: 0}
+    ],
+    abilities: [
+    {name: 'assess threat', score: 1},
+    {name: 'collect information', score: 2},
+    {name: 'find', score: 1},
+    {name: 'haggle', score: 1},
+    {name: 'navigate', score: 1},
+    {name: 'take notice', score: 2}
+    ],
+    auxSkills: [
+    {name: 'appraise', score: 0}, {name: 'acrobatic feat', score: 0},
+    {name: 'forgery', score: 0}, {name: 'bandage injury', score: 0},
+    {name: 'gamble', score: 0}, {name: 'bribe', score: 0},
+    {name: 'jump', score: 0}, {name: 'decipher', score: 0},
+    {name: 'provoke', score: 0}, {name: 'recollect', score: 0},
+    {name: 'scale wall', score: 0}, {name: 'run', score: 0}
+    ],
+    conditioning: [
+    {name: 'poise', score: 0},
+    {name: 'avoidance', score: 1},
+    {name: 'capacity', score: 1}
+    ],
+    titles: ['no title', 'rat', 'dasher', 'mystborn']
+  },
+  {
     name: 'spellwork',
     proficiencies: [
     {name: 'artifice', attribute: 'int', requirement: 9, score: 0},
     {name: 'charms', attribute: 'int', requirement: 11, score: 0},
-    {name: 'radial', attribute: 'per', requirement: 13, score: 0},
-    {name: 'targeted', attribute: 'pre', requirement: 13, score: 0},
-    {name: 'touch', attribute: 'agi', requirement: 13, score: 0}
+    {name: 'emergence', attribute: 'per', requirement: 13, score: 0},
+    {name: 'spellcasting', attribute: 'pre', requirement: 11, score: 0},
+    {name: 'transference', attribute: 'agi', requirement: 11, score: 0}
     ],
     abilities: [
     {name: 'assess threat', score: 1},
@@ -1658,11 +1658,11 @@ var ruleBook = {
   {
     name: 'stewardship',
     proficiencies: [
+    {name: 'animal handling', attribute: 'str', requirement: 11, score: 0},	    
     {name: 'food handling', attribute: 'per', requirement: 9, score: 0},
-    {name: 'survivalism', attribute: 'end', requirement: 9, score: 0},
-    {name: 'animal handling', attribute: 'str', requirement: 11, score: 0},
-    {name: 'provisioning', attribute: 'per', requirement: 11, score: 0},
-    {name: 'operations', attribute: 'int', requirement: 11, score: 0}
+    {name: 'operations', attribute: 'str', requirement: 11, score: 0},
+    {name: 'provisioning', attribute: 'end', requirement: 11, score: 0},    
+    {name: 'survivalism', attribute: 'end', requirement: 7, score: 0}
     ],
     abilities: [
     {name: 'assess threat', score: 2},
