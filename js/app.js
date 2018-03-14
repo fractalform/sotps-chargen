@@ -1752,26 +1752,26 @@ var ruleBook = {
     ],
     outcomes: {
     allNumbersDistinct: [
-    'the encounter was painful, haunting, and traumatic',
+    'The encounter was painful, haunting, and traumatic.',
     'no bonuses to training'
     ],
     sequentialNumbers: [
-    'you narrowly escaped death, and the encounter has had a lasting detrimental effect',
+    'You narrowly escaped death, and the encounter has had a lasting detrimental effect.',
     '-2 to endurance'
     ],
     oneEqualedPair: [
-    'you discovered a deep connection to pale stone, and can now harness its energy',
+    'You have discovered a deep connection to pale stone, and can now harness its energy.',
     '+1 healing'
     ],
     threeEqualNumbers: [
-    'you experience painful lesions and internal bleeding, then death.',
+    'You experience painful lesions and internal bleeding, then death.',
     ],
     twoEqualedPairs: [
-    'you discovered an affinity for pale stone, and can now harness its energy',
+    'You have discovered an affinity for pale stone, and can now harness its energy.',
     '+2 healing'
     ],
     allEqualNumbers: [
-    'you discovered an intrinsic bond with pale stone',
+    'You have uncovered a powerful intrinsic bond with pale stone, making you inexplicably resilient.',
     '+2 healing, character never ages'
     ]
     },
@@ -2026,7 +2026,7 @@ var view = {
   renderStringForPaleStoneEncounter: function() {
     var encounter = character.paleStone.encounter;
     var encounterString =  '<h4>encounter</h4><p>' + encounter.exposure + encounter.description + encounter.locale +
-    '&nbsp;' + encounter.impact + '<br></p><br><h4>outcome</h4><p>' + character.paleStone.outcome.join('&nbsp;') + '</p>';
+    '&nbsp;' + encounter.impact + '<br></p><br><h4>outcome</h4><p>' + character.paleStone.outcome.join('<br>') + '</p>';
     if (character.paleStone.death) {
       encounterString += '<h4>death result</h4><h5>' + character.paleStone.death + '</h5>';
       if (character.paleStone.newOutcome) {
