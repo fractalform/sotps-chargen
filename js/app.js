@@ -1813,9 +1813,9 @@ var ruleBook = {
     'You die tragically but with a noble dignity, so much so that a nearby youth is deeply inspired to pursue their own ' +
     'adventure in your honor, even assuming your name. (Roll a new character who assumes this same starting location.)',
     'You pass a parchment to the closest person near you as your breathing fails. The parchment is a “Letter of Whispers,” ' +
-    'a sacred writ blessed by Caretakers of Maros that deems the deceased’s belongings must pass specifically to (Roll a new character).',
+    'a sacred writ blessed by Caretakers of Maros that deems the deceased’s belongings must pass specifically to (Finish outfitting Step Six, then roll a new character).',
     'You seem to pass into the next realm, but just as one would prepare for mourning, you awake in a panic, ' +
-    'mentally clutching intriguing visions of the '
+    'mentally clutching intriguing visions of the of a far-off place (roll for location on the Provincial Origins chart in Appendix 1)'
     ],
     deathRandoms: {
       missingLimbs: ['right arm.', 'left arm.', 'right leg.', 'left leg.'],
@@ -2028,9 +2028,9 @@ var view = {
     var encounterString =  '<h4>encounter</h4><p>' + encounter.exposure + encounter.description + encounter.locale +
     '&nbsp;' + encounter.impact + '<br></p><br><h4>outcome</h4><p>' + character.paleStone.outcome.join('<br>') + '</p>';
     if (character.paleStone.death) {
-      encounterString += '<h4>death result</h4><h5>' + character.paleStone.death + '</h5>';
+      encounterString += '<h4>death result</h4><p>' + character.paleStone.death + '</p>';
       if (character.paleStone.newOutcome) {
-        encounterString += '<h4>new outcome</h4><h5>' + character.paleStone.newOutcome.join('&nbsp;');
+        encounterString += '<h4>new outcome</h4><p>' + character.paleStone.newOutcome.join('<br>') + '</p>';
       }
     }
     return encounterString;
