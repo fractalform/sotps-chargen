@@ -2028,9 +2028,9 @@ var view = {
     var encounterString =  '<h4>encounter</h4><p>' + encounter.exposure + encounter.description + encounter.locale +
     '&nbsp;' + encounter.impact + '<br></p><br><h4>outcome</h4><p>' + character.paleStone.outcome.join('<br>') + '</p>';
     if (character.paleStone.death) {
-      encounterString += '<h4>death result</h4><p>' + character.paleStone.death + '</p>';
+      encounterString += '<br><h4>death result</h4><p>' + character.paleStone.death + '</p>';
       if (character.paleStone.newOutcome) {
-        encounterString += '<h4>new outcome</h4><p>' + character.paleStone.newOutcome.join('<br>') + '</p>';
+        encounterString += '<h4>new outcome</h4><p>' + character.paleStone.newOutcome.join('<br>');
       }
     }
     return encounterString;
