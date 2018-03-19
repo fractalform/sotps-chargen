@@ -158,8 +158,18 @@ var character = {
     var appearance = this.characteristics.appearance;
     this.final.height = appearance.height;
     this.final.weight = appearance.weight;
-    for (category in featuresObject) {
-      features.push(featuresObject[category][diceRoller.single(50) - 1]);
+    var featureCategories = [];
+    var rollFeatureCategories = function() {
+      featureCategories.push(diceRoller.single(6));
+      while (featureCategories.indexOf(6) != -1) {
+	featureCategories.splice(featureCategories.indexOf(6), 1);
+	featureCategories.push(diceRoller.single(6));
+	rollFeatureCategories();
+      }
+    }
+    rollFeatureCategories();
+    for (var i = 0; i < featureCategories.length; i++) {
+      features.push(featuresObject[featureCategories[i] - 1][diceRoller.single(50) - 1]);
     }
     this.characteristics.appearance.features = features.filter(function(feature) {
       return feature !== '';
@@ -773,8 +783,8 @@ var ruleBook = {
     {ancestry: 'kahlniss&#225', height: [4, 48], weight: [5, 50], baseAge: [12, 15]},
     {ancestry: 'pulnag&#225', height: [3, 60], weight: [5, 90], baseAge: [10, 15]},
   ],
-  distinguishingFeatures: {
-    quirks: [
+  distinguishingFeatures: [
+    [
     'Impeccable poise or clearheadedness', 'Impeccable poise or clearheadedness', 'Impeccable poise or clearheadedness',
     'Impeccable poise or clearheadedness', 'Impeccable poise or clearheadedness', '', '', '', 'Speaks excessively loudly',
     'An asynchronous gait', 'Frequently squints or furrows brow', 'Excessive and/or intense blinking', 'Seems always serious in tone',
@@ -789,7 +799,7 @@ var ruleBook = {
     'Feels compelled to intimidate others', 'Feels compelled to intimidate others', 'Feels compelled to intimidate others',
     'Feels compelled to intimidate others'
     ],
-    proportions: [
+    [
     'Strikingly symmetrical', 'Strikingly symmetrical', 'Strikingly symmetrical', 'Strikingly symmetrical', 'Strikingly symmetrical',
      '', '', '', '', '', 'Pronounced double chin', 'Very large, gapped teeth', 'Shockingly narrow shoulders',
     'Incredibly small, rounded ears', 'Large and/or bulbous nose', 'Remarkably close-set facial features',
@@ -802,7 +812,7 @@ var ruleBook = {
     '', 'Shocking asymmetry of facial features', 'Shocking asymmetry of facial features', 'Shocking asymmetry of facial features',
     'Shocking asymmetry of facial features', 'Shocking asymmetry of facial features'
     ],
-    scars: [
+    [
     'Smooth, uniformly textured skin', 'Smooth, uniformly textured skin', 'Smooth, uniformly textured skin',
     'Smooth, uniformly textured skin', 'Smooth, uniformly textured skin', '', '', '', '', '', '', '', 'Deep scar across right cheek',
     'Missing several teeth', 'Burn scars on face and/or shoulder', 'Burn scars on arms and/or body', 'Califlower ear/torn ear',
@@ -816,7 +826,7 @@ var ruleBook = {
     'Deeply weathered or stained skin', 'Deeply weathered or stained skin', 'Deeply weathered or stained skin',
     'Deeply weathered or stained skin', 'Deeply weathered or stained skin'
     ],
-    modifications: [
+    [
     'Incredibly dense, braided hair', 'Incredibly dense, braided hair', 'Incredibly dense, braided hair', 'Incredibly dense, braided hair',
     'Incredibly dense, braided hair', '', '', '', '', '', '', '', '', '', 'Stretched ear piercings', 'Pierced septum with elaborate jewelry',
     'Ritually tattooed body', 'Ritually tattooed face', 'Teeth filed to points', 'Shaved head', 'Pierced nasal bridge',
@@ -828,7 +838,7 @@ var ruleBook = {
     'Controversial symbolic tattoos', 'Controversial symbolic tattoos', 'Controversial symbolic tattoos', 'Controversial symbolic tattoos',
     'Controversial symbolic tattoos'
     ],
-    anomalies: [
+    [
     'Iridescent, bioluminescent eyes', 'Iridescent, bioluminescent eyes', 'Iridescent, bioluminescent eyes',
     'Iridescent, bioluminescent eyes', 'Iridescent, bioluminescent eyes', '', '', '', '', '', '', '', '', '', '', '',
     'Nearly hairless with translucent skin', 'Albinism', 'Ocular heterochromia', 'Particularly short (height -25%)',
@@ -840,7 +850,7 @@ var ruleBook = {
     'Completely darkened or black sclera', 'Completely darkened or black sclera', 'Completely darkened or black sclera',
     'Completely darkened or black sclera'
     ]
-  },
+  ],
   regions: [
     {
       name:'the ommultic front',
