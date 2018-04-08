@@ -1543,8 +1543,8 @@ var ruleBook = {
     {name: 'connections', attribute: 'int', requirement: 13, score: 0},   
     {name: 'diplomacy', attribute: 'int', requirement: 11, score: 0},
     {name: 'leadership', attribute: 'wis', requirement: 9, score: 0},
-    {name: 'misdirection', attribute: 'cha', requirement: 11, score: 0},
-    {name: 'oration', attribute: 'cha', requirement: 9, score: 0}
+    {name: 'oration', attribute: 'cha', requirement: 9, score: 0},
+    {name: 'wit', attribute: 'cha', requirement: 11, score: 0}
     ],
     abilities: [
     {name: 'assess threat', score: 2},
@@ -1605,10 +1605,10 @@ var ruleBook = {
     name: 'manipulation',
     proficiencies: [
     {name: 'disguises', attribute: 'per', requirement: 9, score: 0},
-    {name: 'intelligence', attribute: 'int', requirement: 13, score: 0},	    
+    {name: 'intelligence', attribute: 'int', requirement: 13, score: 0},
+    {name: 'misdirection', attribute: 'cha', requirement: 11, score: 0},
     {name: 'skullduggery', attribute: 'pre', requirement: 9, score: 0},
-    {name: 'stealth', attribute: 'agi', requirement: 7, score: 0},
-    {name: 'wit', attribute: 'cha', requirement: 11, score: 0}
+    {name: 'stealth', attribute: 'agi', requirement: 7, score: 0}
     ],
     abilities: [
     {name: 'assess threat', score: 1},
