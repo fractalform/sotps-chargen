@@ -89,31 +89,37 @@ var character = {
       var attribute = character.finalAttributes[att];
       var bonPens = character.bonusPenalties;
       if (attribute >= 19) {
-        bonPens[att] = 4;
+        bonPens[att] = 5;
       }
       else if (attribute == 18) {
+        bonPens[att] = 4;
+      }
+      else if (attribute > 16) {
         bonPens[att] = 3;
       }
-      else if (attribute > 15) {
+      else if (attribute > 14) {
         bonPens[att] = 2;
       }
       else if (attribute > 12) {
         bonPens[att] = 1;
       }
-      else if (attribute > 8) {
+      else if (attribute > 10) {
         bonPens[att] = 0;
       }
-      else if (attribute > 5) {
+      else if (attribute > 8) {
         bonPens[att] = -1;
       }
-      else if (attribute > 3) {
+      else if (attribute > 6) {
         bonPens[att] = -2;
       }
-      else if (attribute == 3) {
+      else if (attribute > 4) {
         bonPens[att] = -3;
       }
-      else {
+      else if (attribute == 3) {
         bonPens[att] = -4;
+      }
+      else {
+        bonPens[att] = -5;
       }      
     });
   },
